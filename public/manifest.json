@@ -2,7 +2,7 @@
     "name": "Meu PWA Incrível",
     "short_name": "MeuApp",
     "description": "Um app feito com Next.js e PWA",
-    "start_url": "/",
+    "start_url": "/aplicativo/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
