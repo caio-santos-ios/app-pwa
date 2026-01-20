@@ -3,11 +3,28 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --color-brand-25: #f2f5f8;
+  --color-brand-50: #e8edf2;
+  --color-brand-100: #cedbe6;
+  --color-brand-200: #a2bcce;
+  --color-brand-300: #6d93b0;
+  --color-brand-400: #457091;
+  --color-brand-500: #1a3a5c;
+  --color-brand-600: #163250;
+  --color-brand-700: #122942;
+  --color-brand-800: #0f2135;
+  --color-brand-900: #0c1a29;
+  --color-brand-950: #07101a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-500: var(--color-brand-500);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +40,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-erp-primary {
+  @apply h-11 w-full rounded-lg border appearance-none px-4 py-2.5 text-sm placeholder:text-gray-400 focus:outline-hidden focus:ring-3 focus:border-(--erp-primary-color) dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30 dark:focus:border-(--erp-primary-color)
+}
+
+.input-erp-default {
+  @apply bg-transparent text-gray-800 border-gray-300 focus:border-brand-300 focus:ring-brand-500 dark:border-gray-700;
 }

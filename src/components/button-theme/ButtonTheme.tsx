@@ -1,0 +1,17 @@
+"use client";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+
+export default function ButtonTheme() {
+    const [mounted, setMounted] = useState(false);
+    const { theme, setTheme } = useTheme(); 
+    useEffect(() => setMounted(true), []);
+
+    if (!mounted) return null;
+
+    return (
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            Alternar para modo {theme === "dark" ? "Claro" : "Escuro"}
+        </button>
+    );
+}
